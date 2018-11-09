@@ -1,0 +1,18 @@
+﻿body {
+    width: auto;
+    max-width: 1200px;
+    background-color: burlywood;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}

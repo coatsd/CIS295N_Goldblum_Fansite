@@ -1,0 +1,16 @@
+﻿@model DC_Fan_Site_Goldbloom.Models.Story
+
+@{
+    ViewData["Title"] = "Post a Reply";
+    ViewData["Comment"] = "This page is the form the users will have to submit a new story to the site.";
+}
+
+<h1>Review for </h1>
+
+<form method="post" asp-controller="Stories" asp-action="ReplyView">
+    <label for="Header">Header</label>
+    <input type="text" asp-for="Header" /><br />
+    <label for="Body">Body</label>
+    <input type="text" asp-for="Body" />
+    <input type="submit" value="Post" />
+</form>

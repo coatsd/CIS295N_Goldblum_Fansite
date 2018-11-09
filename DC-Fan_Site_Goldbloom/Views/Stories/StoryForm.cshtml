@@ -1,0 +1,14 @@
+﻿@model DC_Fan_Site_Goldbloom.Models.Story
+
+@{
+    ViewData["Title"] = "Post a Story";
+    ViewData["Comment"] = "This page is the form for submitting a story.";
+}
+
+<form method="post" asp-controller="Stories" asp-action="PostConfirm">
+    <label for="Header">Header</label>
+    <input type="text" asp-for="Header" /><br />
+    <label for="Body">Body</label>
+    <input type="text" asp-for="Body" />
+    <input type="submit" value="Post" />
+</form>

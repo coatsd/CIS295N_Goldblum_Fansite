@@ -1,0 +1,22 @@
+﻿table {
+    width: auto;
+    max-width: 1000px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+th {
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+td {
+    width: auto;
+    max-width: 500px;
+    border: 1px solid black;
+}
+
+#replyItem:hover {
+    background-color: forestgreen;
+    color: lightsalmon;
+}
