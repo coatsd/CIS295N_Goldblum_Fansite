@@ -50,10 +50,9 @@ namespace DC_Fan_Site_Goldbloom.Models
 		/// </summary>
 		/// <param name="cap"></param>
 		/// <returns></returns>
-		public List<Story> CreateTestData(int cap)
+		public void CreateTestData(int cap)
 		{
-			List<Story> stories = new List<Story>();
-
+			// Creates 
 			for (int i = 0; i < cap; i++)
 			{
 				User u = new User() { Username = "User " + i.ToString() };
@@ -66,6 +65,7 @@ namespace DC_Fan_Site_Goldbloom.Models
 							   i.ToString(),
 					  Body = "Body " + j.ToString() + " for story " +
 							 i.ToString() };
+					replies.Add(r);
 				}
 
 				Story s = new Story() { Header = "Header for Story " + i.ToString(),
@@ -74,8 +74,6 @@ namespace DC_Fan_Site_Goldbloom.Models
 
 				stories.Add(s);
 			}
-
-			return stories;
 		}
     }
 }

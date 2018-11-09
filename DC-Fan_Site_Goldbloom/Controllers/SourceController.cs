@@ -16,8 +16,12 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 
         public SourceController()
         {
-            Media media1 = new Media() { Title = "Jeff Goldblum", Artist = "imdb.com",
-                                         Type = "Biography", Link = "https://www.imdb.com/name/nm0000156/" };
+            Media media1 = new Media() { Title = "Jeff Goldblum",
+										 Artist = "imdb.com",
+                                         Type = "Biography",
+										 Link = 
+										 "https://www.imdb.com/name/nm0000156/"
+										};
 
             mediaList.Add(media1);
         }
