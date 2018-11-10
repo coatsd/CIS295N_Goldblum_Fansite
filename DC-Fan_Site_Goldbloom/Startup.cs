@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using DC_Fan_Site_Goldbloom.Models;
 
 namespace DC_Fan_Site_Goldbloom
 {
@@ -22,6 +23,8 @@ namespace DC_Fan_Site_Goldbloom
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddTransient<IStoryRepository, StoryTestRepository> ();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

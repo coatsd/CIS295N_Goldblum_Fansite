@@ -29,12 +29,12 @@ namespace DC_Fan_Site_Goldbloom.Models
 		/// </summary>
 		/// <param name="user"></param>
 		/// <returns></returns>
-		public List<Story> GetUserStories(User user)
+		public List<Story> GetUserStories(String userID)
 		{
 			List<Story> userStories = new List<Story>();
 			stories.ForEach(s =>
 			{
-				if (s.User == user)
+				if (s.User.Username == userID)
 				{
 					userStories.Add(s);
 				}

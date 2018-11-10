@@ -19,9 +19,9 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 			storyRepo = storyRepository;
             // Sort the stories by the first letter of the Header Property
 			// in each story.
-            storyRepo.Stories.Sort((s1, s2) => 
-										 s1.Header.Substring(0).CompareTo(
-										 s2.Header.Substring(0)));
+            // storyRepo.Stories.Sort((s1, s2) => 
+			//							 s1.Header.Substring(0).CompareTo(
+			//							 s2.Header.Substring(0)));
         }
 
         #endregion Variables and Constructors

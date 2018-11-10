@@ -12,7 +12,7 @@ namespace DC_Fan_Site_Goldbloom.Models
 		#region Methods
 
 		void AddStory(Story story);
-		List<Story> GetUserStories(User user);
+		List<Story> GetUserStories(string userID);
 		
 		#endregion Methods
 	}

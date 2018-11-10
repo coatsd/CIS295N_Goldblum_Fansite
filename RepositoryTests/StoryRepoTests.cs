@@ -26,5 +26,12 @@ namespace RepositoryTests
 			testRepo.CreateTestData(3);
 			Assert.True(testRepo.Stories.Count == 3);
 		}
+
+        [Fact]
+        public void TestGetUserStories()
+        {
+            testRepo.CreateTestData(3);
+            Assert.True(testRepo.GetUserStories("User 0").Count == 1);
+        }
     }
 }
