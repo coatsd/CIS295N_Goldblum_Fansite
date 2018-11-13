@@ -13,6 +13,7 @@ namespace DC_Fan_Site_Goldbloom.Models
 
 		void AddStory(Story story);
 		List<Story> GetUserStories(string userID);
+        void CreateTestData(int num);
 		
 		#endregion Methods
 	}

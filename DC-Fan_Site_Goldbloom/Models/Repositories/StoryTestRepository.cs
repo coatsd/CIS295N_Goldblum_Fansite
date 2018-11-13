@@ -14,7 +14,7 @@ namespace DC_Fan_Site_Goldbloom.Models
 		/// This attribute retrieves all the stories that currently reside in 
 		/// the "StoryTestRepository" object's Story list.
 		/// </summary>
-		public List<Story> Stories => stories;
+		public List<Story> Stories { get { return stories; } }
 		/// <summary>
 		/// This Method adds a Story to the Story List stored in the 
 		/// Repository.
