@@ -13,6 +13,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         #region Variables and Constructors
 
         private List<Media> mediaList = new List<Media>();
+        private List<Book> bookList = new List<Book>();
 
         public SourceController()
         {
@@ -24,15 +25,23 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 										};
 
             mediaList.Add(media1);
+
+            Book book1 = new Book() { Title = "Do I Hate Being Right All the Time",
+                                      Author = "Belly Kids", Genre = "Activity Book",
+                                      Publisher = "Belly Kids", PubDate = "2/17/2017"
+                                      Link = "https://www.amazon.com/gp/search?index=books&linkCode=qs&keywords=9780995578012"
+                                    };
+
+            bookList.Add(book1);
         }
 
         #endregion Variables and Constructors
 
         #region Methods that return a View
 
-        public IActionResult Sources()
+        public IActionResult Media()
         {
-            return View("Sources", mediaList);
+            return View("Media", mediaList);
         }
 
         #endregion Methods that return a view

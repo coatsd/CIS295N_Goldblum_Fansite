@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace DC_Fan_Site_Goldbloom.Models
+{
+    public class Book
+    {
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Genre { get; set; }
+        public string Publisher { get; set; }
+        public string PubDate { get; set; }
+        public string Link { get; set; }
+    }
+}
