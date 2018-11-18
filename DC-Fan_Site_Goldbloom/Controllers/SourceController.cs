@@ -28,7 +28,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 
             Book book1 = new Book() { Title = "Do I Hate Being Right All the Time",
                                       Author = "Belly Kids", Genre = "Activity Book",
-                                      Publisher = "Belly Kids", PubDate = "2/17/2017"
+                                      Publisher = "Belly Kids", PubDate = "2/17/2017",
                                       Link = "https://www.amazon.com/gp/search?index=books&linkCode=qs&keywords=9780995578012"
                                     };
 
@@ -42,6 +42,11 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         public IActionResult Media()
         {
             return View("Media", mediaList);
+        }
+
+        public IActionResult Books()
+        {
+            return View("Books", bookList);
         }
 
         #endregion Methods that return a view
