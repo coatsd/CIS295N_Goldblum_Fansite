@@ -34,21 +34,14 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
             for (int i = 0; i < cap; i++)
             {
                 User u = new User() { Username = "User " + i.ToString() };
-
-                List<Reply> replies = new List<Reply>();
-                for (int j = 0; j < 2; j++)
-                {
-                    Reply r = new Reply()
-                    {
-                        User = u,
-                        Header = "Reply " + j.ToString() + " for Story " +
-                               i.ToString(),
-                        Body = "Body " + j.ToString() + " for story " +
-                             i.ToString()
-                    };
-                    replies.Add(r);
-                }
-            }
+				Reply r = new Reply()
+				{
+					User = u,
+					Header = "Header for Reply " + i.ToString(),
+					Body = "Body for reply " + i.ToString()
+				};
+				replies.Add(r);
+			}
         }
 
         #endregion Methods

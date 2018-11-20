@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DC_Fan_Site_Goldbloom.Models;
+using DC_Fan_Site_Goldbloom.Models.Repositories;
 
 namespace DC_Fan_Site_Goldbloom.Controllers
 {
@@ -13,12 +14,13 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 		#region Variables and Contructors
 
 		IStoryRepository storyRepository;
+		IReplyRepository replyRepository;
 
-        public StoriesController(IStoryRepository storyRepo)
+        public StoriesController(IStoryRepository storyRepo,
+								 IReplyRepository replyRepo)
         {
-            storyRepo.CreateTestData(3);
-
             storyRepository = storyRepo;
+			replyRepository = replyRepo;
 
             // Sort the stories by the first letter of the Header Property
 			// in each story.
@@ -28,6 +30,10 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         }
 
         #endregion Variables and Constructors
+
+		public IStoryRepository StoryRepository { get { return storyRepository; } }
+
+		public IReplyRepository ReplyRepository { get { return replyRepository; } }
 
         #region Methods that return a View
 
@@ -61,6 +67,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         public IActionResult ReplyView(string head, string body)
         {
             Reply reply = new Reply { Header = head, Body = body };
+			
             return RedirectToAction("PostList");
         }
 
