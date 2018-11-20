@@ -12,7 +12,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
 
         #region Methods
 
-        public void AddStory(Reply reply)
+        public void AddReply(Reply reply)
         {
             Replies.Add(reply);
         }

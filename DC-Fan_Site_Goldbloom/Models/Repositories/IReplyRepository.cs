@@ -11,7 +11,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
 
         #region Methods
 
-        void AddStory(Reply reply);
+        void AddReply(Reply reply);
         List<Reply> GetUserReplies(string userID);
         void CreateTestData(int cap);
 

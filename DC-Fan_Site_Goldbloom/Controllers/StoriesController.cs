@@ -67,7 +67,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         public IActionResult ReplyView(string head, string body)
         {
             Reply reply = new Reply { Header = head, Body = body };
-			
+			replyRepository.AddReply(reply);
             return RedirectToAction("PostList");
         }
 
