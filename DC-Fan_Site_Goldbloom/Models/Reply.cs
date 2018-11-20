@@ -8,7 +8,7 @@ namespace DC_Fan_Site_Goldbloom.Models
 {
     public class Reply
     {
-        public User User { get; }
+        public User User { get; set; }
         public int Rating { get; set; }
         public string Header { get; set; }
         public string Body { get; set; }

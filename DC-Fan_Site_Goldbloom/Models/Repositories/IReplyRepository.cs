@@ -7,6 +7,14 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
 {
     public interface IReplyRepository
 	{
+        List<Reply> Replies { get; }
 
-	}
+        #region Methods
+
+        void AddStory(Reply reply);
+        List<Reply> GetUserReplies(string userID);
+        void CreateTestData(int cap);
+
+        #endregion Methods
+    }
 }
