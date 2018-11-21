@@ -6,7 +6,7 @@ using DC_Fan_Site_Goldbloom.Models;
 
 namespace DC_Fan_Site_Goldbloom.Models
 {
-    public class Reply
+    public class Reply : IPost
     {
         public User User { get; set; }
         public int Rating { get; set; }

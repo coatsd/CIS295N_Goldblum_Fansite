@@ -44,12 +44,11 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostConfirm(string head, string body, 
-										 IStoryRepository storyRepository)
+        public IActionResult PostConfirm(string head, string body)
         {
             Story story = new Story { Header = head, Body = body };
             storyRepository.AddStory(story);
-            return RedirectToAction("PostList");
+            return View("PostConfirm", story);
         }
 
         public IActionResult PostList()
@@ -68,7 +67,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         {
             Reply reply = new Reply { Header = head, Body = body };
 			replyRepository.AddReply(reply);
-            return RedirectToAction("PostList");
+            return View("PostConfirm", reply);
         }
 
         #endregion Methods that return a View

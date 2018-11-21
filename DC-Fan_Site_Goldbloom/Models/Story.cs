@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DC_Fan_Site_Goldbloom.Models
 {
-    public class Story
+    public class Story : IPost
     {
         private List<Reply> replies = new List<Reply>();
 
