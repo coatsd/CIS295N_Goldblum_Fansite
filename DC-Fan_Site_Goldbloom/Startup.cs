@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using DC_Fan_Site_Goldbloom.Models;
 using DC_Fan_Site_Goldbloom.Models.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace DC_Fan_Site_Goldbloom
 {
@@ -24,8 +25,11 @@ namespace DC_Fan_Site_Goldbloom
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+			services.AddDbContext<AppDbContext>(options =>
+				options.UseSqlServer(
+					Configuration["ConnectionString"]));
 
-            services.AddTransient<IStoryRepository, StoryTestRepository> ();
+            services.AddTransient<IStoryRepository, EFStoryRepository> ();
 			services.AddTransient<IReplyRepository, ReplyTestRepository> ();
         }
 

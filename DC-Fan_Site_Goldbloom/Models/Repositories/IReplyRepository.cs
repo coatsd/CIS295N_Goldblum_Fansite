@@ -12,8 +12,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
         #region Methods
 
         void AddReply(Reply reply);
-        List<Reply> GetUserReplies(string userID);
-        void CreateTestData(int cap);
+        IEnumerable<Reply> GetUserReplies(string userID);
 
         #endregion Methods
     }

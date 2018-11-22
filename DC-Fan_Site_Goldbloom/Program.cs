@@ -20,6 +20,8 @@ namespace DC_Fan_Site_Goldbloom
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+				.UseDefaultServiceProvider(options =>
+					options.ValidateScopes = false)
                 .Build();
     }
 }

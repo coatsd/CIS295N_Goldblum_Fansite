@@ -16,7 +16,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 		IStoryRepository storyRepository;
 		IReplyRepository replyRepository;
 
-        public StoriesController(IStoryRepository storyRepo,
+		public StoriesController(IStoryRepository storyRepo,
 								 IReplyRepository replyRepo)
         {
             storyRepository = storyRepo;
@@ -53,7 +53,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 
         public IActionResult PostList()
         {
-            ViewBag.PostCount = storyRepository.Stories.Count;
+			ViewBag.PostCount = storyRepository.Stories.Count;
             return View("PostList", storyRepository.Stories);
         }
 

@@ -7,13 +7,11 @@ namespace DC_Fan_Site_Goldbloom.Models
 {
     public interface IStoryRepository
 	{
-		List<Story> Stories { get; }
-
 		#region Methods
 
+		List<Story> Stories { get; }
 		void AddStory(Story story);
-		List<Story> GetUserStories(string userID);
-        void CreateTestData(int num);
+		IEnumerable<Story> GetUserStories(string userName);
 		
 		#endregion Methods
 	}

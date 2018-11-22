@@ -16,7 +16,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
         {
             Replies.Add(reply);
         }
-        public List<Reply> GetUserReplies(string userID)
+        public IEnumerable<Reply> GetUserReplies(string userID)
         {
             List<Reply> userReplies = new List<Reply>();
             replies.ForEach(s =>

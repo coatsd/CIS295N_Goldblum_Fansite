@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -29,12 +30,12 @@ namespace DC_Fan_Site_Goldbloom.Models
 		/// </summary>
 		/// <param name="user"></param>
 		/// <returns></returns>
-		public List<Story> GetUserStories(String userID)
+		public IEnumerable<Story> GetUserStories(String userName)
 		{
 			List<Story> userStories = new List<Story>();
 			stories.ForEach(s =>
 			{
-				if (s.User.Username == userID)
+				if (s.User.Username == userName)
 				{
 					userStories.Add(s);
 				}
@@ -52,7 +53,6 @@ namespace DC_Fan_Site_Goldbloom.Models
 		/// <returns></returns>
 		public void CreateTestData(int cap)
 		{
-			// Creates 
 			for (int i = 0; i < cap; i++)
 			{
 				User u = new User() { Username = "User " + i.ToString() };
