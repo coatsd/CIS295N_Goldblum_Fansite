@@ -9,7 +9,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
     {
         private List<Media> medias = new List<Media>();
         
-        public List<Media> Media { get { return medias; } }
+        public List<Media> Medias { get { return medias; } }
 
         public void AddMedia(Media media)
         {

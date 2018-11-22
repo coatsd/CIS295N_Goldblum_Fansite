@@ -29,8 +29,10 @@ namespace DC_Fan_Site_Goldbloom
 				options.UseSqlServer(
 					Configuration["ConnectionString"]));
 
-            services.AddTransient<IStoryRepository, EFStoryRepository> ();
-			services.AddTransient<IReplyRepository, ReplyTestRepository> ();
+            services.AddTransient<IStoryRepository, EFStoryRepository>();
+			services.AddTransient<IReplyRepository, EFReplyRepository>();
+            services.AddTransient<IMediaRepository, EFMediaRepository>();
+            services.AddTransient<IBookRepository, EFBookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

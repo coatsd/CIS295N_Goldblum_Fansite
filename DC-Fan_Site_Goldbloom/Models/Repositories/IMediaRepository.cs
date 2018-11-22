@@ -7,7 +7,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
 {
     public interface IMediaRepository
     {
-        List<Media> Media { get; }
+        List<Media> Medias { get; }
 
         void AddMedia(Media media);
     }

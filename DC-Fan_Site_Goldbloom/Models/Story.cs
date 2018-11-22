@@ -8,19 +8,10 @@ namespace DC_Fan_Site_Goldbloom.Models
 {
     public class Story : IPost
     {
-        private List<Reply> replies = new List<Reply>();
-
+        public int StoryID { get; set; }
         public User User { get; set; }
         public string Header { get; set; }
         public string Body { get; set; }
         public List<Reply> Replies { get; set; }
-        /*
-        {
-            get
-            {
-                return replies;
-            }
-        }
-        */
     }
 }

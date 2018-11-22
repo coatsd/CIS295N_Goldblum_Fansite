@@ -31,9 +31,9 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 
         #endregion Variables and Constructors
 
-		public IStoryRepository StoryRepository { get { return storyRepository; } }
+		//public IStoryRepository StoryRepository { get { return storyRepository; } }
 
-		public IReplyRepository ReplyRepository { get { return replyRepository; } }
+		//public IReplyRepository ReplyRepository { get { return replyRepository; } }
 
         #region Methods that return a View
 
