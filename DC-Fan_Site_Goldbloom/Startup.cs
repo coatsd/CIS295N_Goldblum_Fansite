@@ -27,7 +27,7 @@ namespace DC_Fan_Site_Goldbloom
             services.AddMvc();
 			services.AddDbContext<AppDbContext>(options =>
 				options.UseSqlServer(
-					Configuration["ConnectionString"]));
+					Configuration["ConnectionString:Local"]));
 
             services.AddTransient<IStoryRepository, EFStoryRepository>();
 			services.AddTransient<IReplyRepository, EFReplyRepository>();
@@ -56,6 +56,8 @@ namespace DC_Fan_Site_Goldbloom
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SeedData.EnsurePopulated(app);
         }
     }
 }

@@ -22,19 +22,31 @@
     <tbody>
         @for (int i = 0; i < Model.Count; i++)
         {
+            int amount = 0;
             <tr>
                 <td>
                     <h4>@Model[i].Header</h4>
                     <p>&#160 &#160 &#160 @Model[i].Body</p>
                 </td>
                 <td>
-                    @for (int j = 0; j < Model[i].Replies.Count; j++)
+                    @for (int j = 0; j < ViewBag.Replies.Count; j++)
                     {
-                        <a>
-                            @Model[i].Replies[j].Rating/5 &#160 @Model[i].Replies[j].Header
-                        </a><br />
+                        if (ViewBag.Replies[j].StoryID == Model[i].StoryID)
+                        {
+                            amount += 1;
+                            <h4>@amount. @ViewBag.Replies[j].Header</h4>
+                        }
                     }
-                    <a asp-action="ReplyForm" asp-route-header="@Model[i].Header">Post a Reply</a>
+
+                    <label>Post a Reply:</label>
+                    <form method="post" asp-controller="Stories" asp-action="ReplyView">
+                        <input type="hidden" name="storyID" value="@Model[i].StoryID" />
+                        <label for="Header">Header</label>
+                        <input type="text" name="head" /><br />
+                        <label for="Body">Body</label>
+                        <input type="text" name="body" />
+                        <input type="submit" value="Post" />
+                    </form>
                 </td>
             </tr>
         }

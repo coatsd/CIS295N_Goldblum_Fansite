@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DC_Fan_Site_Goldbloom.Models
 {
-    public class SeedData
+    public static class SeedData
 	{
-		public void EnsurePopulated(IApplicationBuilder app)
+		public static void EnsurePopulated(IApplicationBuilder app)
 		{
 			AppDbContext context = app.ApplicationServices
 				.GetRequiredService<AppDbContext>();
@@ -90,6 +90,8 @@ namespace DC_Fan_Site_Goldbloom.Models
                                Link = "https://www.barnesandnoble.com/w/do-i-hate-being-right-all-the-time-belly-kids/1126014085"
                     });
             }
+
+            context.SaveChanges();
 		}
 	}
 }

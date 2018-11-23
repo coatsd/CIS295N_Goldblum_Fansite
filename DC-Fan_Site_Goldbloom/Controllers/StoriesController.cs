@@ -54,6 +54,7 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         public IActionResult PostList()
         {
 			ViewBag.PostCount = storyRepository.Stories.Count;
+            ViewBag.Replies = replyRepository.Replies;
             return View("PostList", storyRepository.Stories);
         }
 
@@ -63,9 +64,9 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         }
 
         [HttpPost]
-        public IActionResult ReplyView(string head, string body)
+        public IActionResult ReplyView(string storyID, string head, string body)
         {
-            Reply reply = new Reply { Header = head, Body = body };
+            Reply reply = new Reply { StoryID = int.Parse(storyID), Header = head, Body = body };
 			replyRepository.AddReply(reply);
             return View("PostConfirm", reply);
         }
