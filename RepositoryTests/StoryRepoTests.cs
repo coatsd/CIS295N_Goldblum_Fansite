@@ -2,6 +2,7 @@ using System;
 using Xunit;
 using DC_Fan_Site_Goldbloom.Controllers;
 using DC_Fan_Site_Goldbloom.Models;
+using System.Linq;
 
 namespace RepositoryTests
 {
@@ -31,7 +32,7 @@ namespace RepositoryTests
         public void TestGetUserStories()
         {
             testRepo.CreateTestData(3);
-            Assert.True(testRepo.GetUserStories("User 0").Count == 1);
+            Assert.True(testRepo.GetUserStories("User 0").ToList().Count == 1);
         }
     }
 }

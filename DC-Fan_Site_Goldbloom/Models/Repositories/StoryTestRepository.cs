@@ -16,6 +16,7 @@ namespace DC_Fan_Site_Goldbloom.Models
 		/// the "StoryTestRepository" object's Story list.
 		/// </summary>
 		public List<Story> Stories { get { return stories; } }
+
 		/// <summary>
 		/// This Method adds a Story to the Story List stored in the 
 		/// Repository.
@@ -30,7 +31,7 @@ namespace DC_Fan_Site_Goldbloom.Models
 		/// </summary>
 		/// <param name="user"></param>
 		/// <returns></returns>
-		public IEnumerable<Story> GetUserStories(String userName)
+		public IEnumerable<Story> GetUserStories(string userName)
 		{
 			List<Story> userStories = new List<Story>();
 			stories.ForEach(s =>
