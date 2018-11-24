@@ -21,6 +21,9 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         {
             mediaRepository = mediaRepo;
             bookRepository = bookRepo;
+
+            mediaRepository.CreateTestData(3);
+            bookRepository.CreateTestData(3);
         }
 
         #endregion Variables and Constructors

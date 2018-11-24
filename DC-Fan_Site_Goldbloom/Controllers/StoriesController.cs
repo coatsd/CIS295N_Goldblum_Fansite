@@ -22,6 +22,9 @@ namespace DC_Fan_Site_Goldbloom.Controllers
             storyRepository = storyRepo;
 			replyRepository = replyRepo;
 
+            storyRepository.CreateTestData(3);
+            replyRepository.CreateTestData(3);
+
             // Sort the stories by the first letter of the Header Property
 			// in each story.
             // storyRepo.Stories.Sort((s1, s2) => 

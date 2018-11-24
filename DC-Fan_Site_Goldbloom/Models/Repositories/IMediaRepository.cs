@@ -10,5 +10,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
         List<Media> Medias { get; }
 
         void AddMedia(Media media);
+
+        void CreateTestData(int cap);
     }
 }

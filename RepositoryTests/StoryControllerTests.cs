@@ -17,8 +17,8 @@ namespace RepositoryTests
 
 		public StoryControllerTests()
         {
-			storyRepo.CreateTestData(3);
-			replyRepo.CreateTestData(3);
+            // Note that the constructor for the controllers call for creating
+            // 3 test objects in their respective constructors.
         }
 
         [Fact]

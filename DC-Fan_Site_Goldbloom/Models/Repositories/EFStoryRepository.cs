@@ -29,5 +29,10 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
 											 select s;
 			return userStories;
 		}
+
+        public void CreateTestData(int cap)
+        {
+
+        }
 	}
 }

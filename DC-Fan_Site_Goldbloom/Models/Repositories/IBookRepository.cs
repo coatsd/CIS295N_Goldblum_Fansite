@@ -10,5 +10,7 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
         List<Book> Books { get; }
 
         void AddBook(Book book);
+
+        void CreateTestData(int cap);
     }
 }

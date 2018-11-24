@@ -21,5 +21,10 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
             context.Books.Add(book);
             context.SaveChanges();
         }
+
+        public void CreateTestData(int cap)
+        {
+
+        }
 	}
 }

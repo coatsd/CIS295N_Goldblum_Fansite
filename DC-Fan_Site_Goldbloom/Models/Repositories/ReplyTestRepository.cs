@@ -36,6 +36,8 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
                 User u = new User() { Username = "User " + i.ToString() };
 				Reply r = new Reply()
 				{
+                    StoryID = i,
+                    ReplyID = i,
 					User = u,
 					Header = "Header for Reply " + i.ToString(),
 					Body = "Body for reply " + i.ToString()

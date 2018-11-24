@@ -58,20 +58,10 @@ namespace DC_Fan_Site_Goldbloom.Models
 			{
 				User u = new User() { Username = "User " + i.ToString() };
 
-				List<Reply> replies = new List<Reply>();
-				for (int j = 0; j < 2; j++)
-				{
-					Reply r = new Reply()
-					{ Header = "Reply " + j.ToString() + " for Story " + 
-							   i.ToString(),
-					  Body = "Body " + j.ToString() + " for story " +
-							 i.ToString() };
-					replies.Add(r);
-				}
-
-				Story s = new Story() { Header = "Header for Story " + i.ToString(),
+				Story s = new Story() { StoryID = i,
+                                        Header = "Header for Story " + i.ToString(),
 										Body = "Body for story " + i.ToString(),
-										User = u, Replies = replies };
+										User = u };
 
 				stories.Add(s);
 			}
