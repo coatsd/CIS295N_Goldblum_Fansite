@@ -61,7 +61,23 @@ namespace DC_Fan_Site_Goldbloom.Controllers
             return View("PostList", storyRepository.Stories);
         }
 
-        public IActionResult ReplyForm()
+		[HttpPost]
+		public IActionResult SearchPostListHeader(string header)
+		{
+			ViewBag.PostCount = storyRepository.Stories.Count;
+			ViewBag.Replies = replyRepository.Replies;
+			return View("PostList", storyRepository.GetStoriesByHeader(header).ToList());
+		}
+
+		[HttpPost]
+		public IActionResult SearchPostListBody(string body)
+		{
+			ViewBag.PostCount = storyRepository.Stories.Count;
+			ViewBag.Replies = replyRepository.Replies;
+			return View("PostList", storyRepository.GetStoriesByBody(body).ToList());
+		}
+
+		public IActionResult ReplyForm()
         {
             return View("ReplyForm");
         }

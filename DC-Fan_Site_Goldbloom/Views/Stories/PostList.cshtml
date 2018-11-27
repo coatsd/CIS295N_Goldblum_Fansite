@@ -52,3 +52,15 @@
         }
     </tbody>
 </table>
+
+<form method="post" asp-controller="Stories" asp-action="SearchPostListHeader">
+	<label for="Search By Header">Search By Header:</label>
+	<input type="text" name="header" />
+	<input type="submit" value="Search" />
+</form>
+
+<form method="post" asp-controller="Stories" asp-action="SearchPostListBody">
+	<label for="Search By Body">Search By Body:</label>
+	<input type="text" name="body" />
+	<input type="submit" value="Search" />
+</form>

@@ -30,6 +30,23 @@ namespace DC_Fan_Site_Goldbloom.Models.Repositories
 			return userStories;
 		}
 
+		public IEnumerable<Story> GetStoriesByHeader(string header)
+		{
+			IEnumerable<Story> stories = from s in context.Stories
+										 where s.Header == header
+										 select s;
+
+			return stories;
+		}
+
+		public IEnumerable<Story> GetStoriesByBody(string body)
+		{
+			IEnumerable<Story> stories = from s in context.Stories
+										 where s.Body == body
+										 select s;
+			return stories;
+		}
+
         public void CreateTestData(int cap)
         {
 

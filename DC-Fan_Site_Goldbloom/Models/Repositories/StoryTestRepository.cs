@@ -45,6 +45,34 @@ namespace DC_Fan_Site_Goldbloom.Models
 			return userStories;
 		}
 
+		public IEnumerable<Story> GetStoriesByHeader(string header)
+		{
+			List<Story> stories = new List<Story>();
+			stories.ForEach(s =>
+			{
+				if (s.Header == header)
+				{
+					stories.Add(s);
+				}
+			});
+
+			return stories;
+		}
+
+		public IEnumerable<Story> GetStoriesByBody(string body)
+		{
+			List<Story> stories = new List<Story>();
+			stories.ForEach(s =>
+			{
+				if (s.Body == body)
+				{
+					stories.Add(s);
+				}
+			});
+
+			return stories;
+		}
+
 		/// <summary>
 		/// This method takes an integer as a parameter, and returns a Story
 		/// Object List containing the same number of Stories as the passed 
