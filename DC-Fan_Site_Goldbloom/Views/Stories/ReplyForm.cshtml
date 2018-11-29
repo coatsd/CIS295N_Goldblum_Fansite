@@ -1,16 +1,20 @@
-﻿@model DC_Fan_Site_Goldbloom.Models.Story
+﻿@model DC_Fan_Site_Goldbloom.Models.Reply
 
 @{
     ViewData["Title"] = "Post a Reply";
-    ViewData["Comment"] = "This page is the form the users will have to submit a new story to the site.";
+    ViewData["Comment"] = "This page is the form the users will have to submit a reply to a story.";
 }
 
-<h1>Review for </h1>
+<h1>Review for Story: @ViewBag.StoryHeader</h1>
 
 <form method="post" asp-controller="Stories" asp-action="ReplyView">
-    <label for="Header">Header</label>
-    <input type="text" asp-for="Header" /><br />
-    <label for="Body">Body</label>
-    <input type="text" asp-for="Body" />
-    <input type="submit" value="Post" />
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<input type="hidden" name="storyID" value="@Model.StoryID" />
+	<label for="Header">Header</label>
+	<input type="text" asp-for="Header" /><br />
+	<span asp-validation-for="Header" class="text-danger"></span><br />
+	<label for="Body">Body</label>
+	<input type="text" asp-for="Body" /><br />
+	<span asp-validation-for="Body" class="text-danger"></span><br />
+	<input type="submit" value="Post" />
 </form>

@@ -6,9 +6,12 @@
 }
 
 <form method="post" asp-controller="Stories" asp-action="PostConfirm">
-    <label for="Header">Header</label>
-    <input type="text" name="head" asp-for="Header" />
-    <label for="Body">Body</label>
-    <input type="text" asp-for="Body" />
-    <input type="submit" value="Post" />
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<label for="Header">Header</label>
+	<input type="text" asp-for="Header" /><br />
+	<span asp-validation-for="Header" class="text-danger"></span><br />
+	<label for="Body">Body</label>
+	<input type="text" asp-for="Body" /><br />
+	<span asp-validation-for="Body" class="text-danger"></span><br />
+	<input type="submit" value="Post" />
 </form>

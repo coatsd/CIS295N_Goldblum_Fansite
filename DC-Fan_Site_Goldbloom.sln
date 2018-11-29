@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DC-Fan_Site_Goldbloom", "DC-Fan_Site_Goldbloom\DC-Fan_Site_Goldbloom.csproj", "{334FC68A-2FDE-4BC4-A80F-0FD49E8F45EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryTests", "RepositoryTests\RepositoryTests.csproj", "{8B06B942-EFB2-40FD-B080-889C90ACFC6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryTests", "RepositoryTests\RepositoryTests.csproj", "{8B06B942-EFB2-40FD-B080-889C90ACFC6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

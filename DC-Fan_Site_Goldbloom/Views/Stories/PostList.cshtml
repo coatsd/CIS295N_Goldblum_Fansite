@@ -39,13 +39,9 @@
                     }
 
                     <label>Post a Reply:</label>
-                    <form method="post" asp-controller="Stories" asp-action="ReplyView">
+                    <form method="post" asp-controller="Stories" asp-action="ReplyForm">
                         <input type="hidden" name="storyID" value="@Model[i].StoryID" />
-                        <label for="Header">Header</label>
-                        <input type="text" name="head" /><br />
-                        <label for="Body">Body</label>
-                        <input type="text" name="body" />
-                        <input type="submit" value="Post" />
+                        <input type="submit" value="Reply" />
                     </form>
                 </td>
             </tr>

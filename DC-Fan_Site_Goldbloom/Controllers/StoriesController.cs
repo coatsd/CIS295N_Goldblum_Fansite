@@ -47,11 +47,14 @@ namespace DC_Fan_Site_Goldbloom.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostConfirm(string head, string body)
+        public IActionResult PostConfirm([Bind("Header, Body")] Story story)
         {
-            Story story = new Story { Header = head, Body = body };
-            storyRepository.AddStory(story);
-            return View("PostConfirm", story);
+			if (ModelState.IsValid)
+			{
+				storyRepository.AddStory(story);
+				return View("PostConfirm", story);
+			}
+			return View("StoryForm");
         }
 
         public IActionResult PostList()
@@ -77,17 +80,30 @@ namespace DC_Fan_Site_Goldbloom.Controllers
 			return View("PostList", storyRepository.GetStoriesByBody(body).ToList());
 		}
 
-		public IActionResult ReplyForm()
+		public IActionResult ReplyForm(int storyID)
         {
-            return View("ReplyForm");
+			Reply reply = new Reply { StoryID = storyID };
+			List<Story> stories = storyRepository.Stories.ToList();
+			for (int i = 0; i < stories.Count; i++)
+			{
+				if (stories[i].StoryID == storyID)
+				{
+					ViewBag.StoryHeader = stories[i].Header;
+					break;
+				}
+			}
+            return View("ReplyForm", reply);
         }
 
         [HttpPost]
-        public IActionResult ReplyView(string storyID, string head, string body)
+        public IActionResult ReplyView([Bind("StoryID, Header, Body")] Reply reply, int storyID)
         {
-            Reply reply = new Reply { StoryID = int.Parse(storyID), Header = head, Body = body };
-			replyRepository.AddReply(reply);
-            return View("PostConfirm", reply);
+			if (ModelState.IsValid)
+			{
+				replyRepository.AddReply(reply);
+				return View("PostConfirm", reply);
+			}
+			return ReplyForm(storyID);
         }
 
         #endregion Methods that return a View
