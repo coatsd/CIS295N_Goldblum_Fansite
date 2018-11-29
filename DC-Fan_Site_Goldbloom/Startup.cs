@@ -27,7 +27,7 @@ namespace DC_Fan_Site_Goldbloom
             services.AddMvc();
 			services.AddDbContext<AppDbContext>(options =>
 				options.UseSqlServer(
-					Configuration["ConnectionString:Local"]));
+					Configuration["ConnectionStrings:Local"]));
 
             services.AddTransient<IStoryRepository, EFStoryRepository>();
 			services.AddTransient<IReplyRepository, EFReplyRepository>();

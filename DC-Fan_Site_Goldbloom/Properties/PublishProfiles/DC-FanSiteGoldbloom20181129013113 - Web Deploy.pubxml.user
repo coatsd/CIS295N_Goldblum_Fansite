@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9NMFYvwHnkqKEgdoVSvstgAAAAACAAAAAAAQZgAAAAEAACAAAACRpZPdI6W7emaAlTz0E4VXwdSIzV/FSBNQONstscZpvgAAAAAOgAAAAAIAACAAAAAYAt9o3WV5KB3EBnVvjqCnqMfDp1rK5ArtqoI+Gf/5S4AAAADGeVS8KhW80GBj2cXpyGb9hcUORmYu5sv9Dy0l9xpx2EG8ejqVecA85UCo71zOuvczlEDIWoOW127C0o3gz/ZczBw6tzBjppvTfDIQj7MtIN8Lxo+1wMDi2OaigSwmmkMvrbR9z83HgLqAraEjAPRmGZH5VC2hmiMvXAuFBsifA0AAAAD3Jx4/N2Jn20+yZ6cLgqhYDgghSXSBkfeVfD61nMLJa64Bcz8btVRpZYgfOQGCGfi4/y5WBcHu1pwM/sJYZVM9</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="Local">
+      <Value>Data Source=tcp:dc-fansitegoldbloom20181129013113dbserver.database.windows.net,1433%3bInitial Catalog=DC-FanSiteGoldbloom20181129013113_db%3bUser Id=coatsd%40dc-fansitegoldbloom20181129013113dbserver%3bPassword=4l3x1sbr0th3R</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="DC_Fan_Site_Goldbloom.Models.AppDbContext">
+      <Value>Data Source=tcp:dc-fansitegoldbloom20181129013113dbserver.database.windows.net,1433%3bInitial Catalog=DC-FanSiteGoldbloom20181129013113_db%3bUser Id=coatsd%40dc-fansitegoldbloom20181129013113dbserver%3bPassword=4l3x1sbr0th3R</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
